@@ -1,0 +1,265 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   font-size: 62.5%;
+   --grey: #535971;
+   --light-gray: #EFEFEF;
+   --red: #FF5374;
+}
+
+body::before {
+   content: '';
+   width: 100%;
+   height: 43.6rem;
+   background: var(--grey);
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   z-index: -1;
+}
+
+body {
+   font-size: 1.6rem;
+   background: var(--light-gray);
+
+}
+
+.page {
+   text-align: center;
+   display: grid;
+   justify-content: center;
+   margin: 0 25px;
+}
+
+header {
+   color: #ffffff;
+   margin-top: 14rem;
+   overflow: scroll;
+}
+
+header h1 {
+   margin-bottom: 2.5rem;
+   font-family: 'Staatliches', cursive;
+   font-size: 4.8rem;
+   line-height: 60px;
+   letter-spacing: 2px;
+}
+
+header p {
+   margin-bottom: 3.5rem;
+   font-family: 'Poppins', sans-serif;
+   font-size: 2rem;
+   line-height: 20px;
+   padding: 0 3rem;
+}
+
+form {
+   background: #ffffff;
+   overflow: scroll;
+   border-radius: 20px 20px 0px 0px;
+   box-shadow: 0px -2px 4px rgba(83, 89, 113, .5);
+}  
+
+fieldset {
+   border: none;
+}
+
+form .fieldset-wrapper {
+   display: grid;
+   gap: 2rem;
+   padding: 2rem 2rem 5rem;
+}
+
+.fieldset-wrapper legend {
+   font-family: 'Staatliches', cursive;
+   font-size: 2.4rem;
+   line-height: 34px;
+   color: var(--grey);
+   border-bottom: 1px solid #E6E6F0;
+   text-align: left;
+   padding: 1rem 0;
+}
+
+.cols.name {
+   display: grid;
+   gap: 2rem;
+}
+
+.cols.first-mentorship,
+.cols.second-mentorship {
+   display: grid;
+   gap: 2rem;
+}
+
+.cols.first-mentorship label,
+.cols.second-mentorship label {
+   display: flex;
+   gap: .5rem;
+   align-items: center;
+}
+
+.input-wrapper {
+   display: grid;
+}
+
+label {
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.4rem;
+   line-height: 24px;
+   text-align: left;
+   margin-bottom: .8rem;
+   color: #4E4958;
+}
+
+input {
+   padding: 1rem;
+   border: 1px solid #E6E6F0;
+   background: #FAFAFC;
+   border-radius: 8px;
+   outline: none;
+   font-size: 1.6rem;
+   color: var(--grey);
+}
+
+input:focus {
+   border: 1px solid var(--grey);
+}
+
+/* n quis colocar, pois acho feio, prefiro deixar o aviso padrão do próprio navegador */
+/* input:invalid:required { */
+   /* border: 1px solid var(--red); */
+/* } */
+
+span {
+   font-family: 'Poppins', sans-serif;
+   color: #C1BCCC;
+   font-size: 1.2rem;
+   line-height: 20px;
+}
+
+span:hover {
+   color: var(--grey);
+}
+
+h3 {
+   font-family: 'Staatliches', cursive;
+   font-size: 2rem;
+   line-height: 34px;
+   text-align: left;
+   color: var(--grey);
+}
+
+footer {
+   width: 100%;
+   background: var(--grey);
+   padding: 3.5rem 0;
+   margin-bottom: 6rem;
+   border-radius: 0px 0px 20px 20px;
+   box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.5);
+   overflow: scroll;
+}
+
+footer input {
+   font-family: 'Staatliches', cursive;
+   background: var(--red);
+   color: #ffffff;
+   border: none;
+   width: 200px; 
+   padding: 1.4rem 0;
+   font-size: 1.9rem;
+   letter-spacing: 1.5px; 
+}
+
+footer input:hover {
+   background-color: #ea3b5e;
+}
+
+/* @media 700px ////////////////////////////////////////////////////////////////////////////// */
+@media(min-width: 700px) {
+   header {
+      display: grid;
+      justify-content: flex-start;
+      overflow: auto;
+   }
+
+   header h1 {
+      text-align: left;
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+   }
+
+   header p {
+      margin-bottom: 5.8rem;
+      padding: 0 10rem 0 1rem;
+   }
+
+   form {
+      width: 65rem;
+      overflow: auto;
+   }
+
+   form .fieldset-wrapper {
+      padding: 2rem 2rem 5rem;
+   }
+
+   .cols.name {
+      display: flex;
+   }
+
+   .cols.name .input-wrapper {
+      width: 100%;
+   }
+
+   .cols.first-mentorship,
+   .cols.second-mentorship {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+   }
+
+   .cols.first-mentorship .input-wrapper,
+   .cols.second-mentorship .input-wrapper {
+      width: 100%;
+   }
+
+   footer {
+      padding: 5rem 0;
+      overflow: auto;
+   }
+
+   footer input {
+      padding: 1.8rem 0;
+      width: 400px;
+   }
+
+}
+
+/* @media 1000px ///////////////////////////////////////////////////////////////////////////// */
+@media(min-width: 1000px) {
+   header p {
+      margin-bottom: 5.8rem;
+      max-width: 50rem;
+      text-align: left;
+      line-height: 30px;
+   }
+
+   form {
+      width: 75rem;
+   }
+
+   form .fieldset-wrapper {
+      padding: 2rem 4rem 5rem;
+   }
+
+   input {
+      padding: 1.5rem 1rem;
+   }
+
+   footer input {
+      font-size: 2rem;
+   }
+}
